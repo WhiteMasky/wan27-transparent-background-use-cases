@@ -108,6 +108,62 @@ Reflections must appear only on the object material itself. Do not create reflec
 Full-body/person cutout only. No gym, no room, no floor contact shadow, no background lighting panel. The empty area around limbs and props must be transparent alpha.
 ```
 
+## 图片编辑失败经验与优化方向
+
+50 张参考图编辑测试中，透明背景成功率为 `34/50 = 68%`。失败样本同样大多是 RGBA 文件，但透明像素为 `0%` 或接近 `0%`。编辑任务比纯生成更难，因为模型容易把“原图画布”或“输入图的背景状态”当作需要保留的组成部分。
+
+### 编辑失败的主要模式
+
+- 透明图标改风格：火箭、灯泡、星星、T 恤图标在 3D 化、金属化、贴纸化时，模型会生成一块浅色贴纸底、纹理底或隐形全画布。
+- Logo / badge 质感化：`enamel badge`、`metallic gold`、`raised bevel` 很容易触发徽章底板或完整图标容器。
+- 透明商品二次编辑：对已经透明的模特、化妆品、鞋等做换装/换包装时，模型有时会重绘整张图并丢掉原 alpha。
+- 多图合成：把 logo 印到衣服、把符号放到表盘、给餐饮图加 badge 时，模型容易输出一个合成后的方形画布。
+- 促销标签 / 文字：`label`、`badge`、`IDEA`、`FRESH` 等词会诱导模型生成贴纸底或文本牌。
+
+### 强化版透明背景编辑模板
+
+```text
+Edit Image 1: [具体编辑目标].
+Return a real PNG with transparent background using the PNG alpha channel.
+Do not flatten the image onto any canvas.
+Do not rasterize the transparent background into white, gray, black, checkerboard, paper, texture, or a low-opacity full-frame layer.
+If the input already has transparency, preserve the exact existing alpha mask everywhere outside the edited pixels.
+Only modify the requested subject pixels; untouched transparent pixels must remain fully transparent alpha = 0.
+If the input has an opaque background, remove the original background completely and leave at least 40% of the canvas fully transparent alpha.
+Output only the edited subject or edited asset cluster.
+No background plate, no badge base, no sticker backing, no app icon tile, no poster card, no square canvas, no display surface, no wall, no floor, no tabletop, no contact shadow.
+```
+
+### 透明输入的专用追加句
+
+```text
+The source image already contains transparency. Treat transparent pixels as locked and immutable. Do not repaint, fill, soften, haze, texture, or replace transparent areas. Preserve alpha = 0 outside the original subject mask.
+```
+
+### 不透明输入抠图的专用追加句
+
+```text
+Remove the original photo background first, then perform the edit. The final image must contain only the edited subject, with fully transparent empty space around all outside edges and interior gaps.
+```
+
+### 多图合成的专用追加句
+
+```text
+Use the extra images only as object or style references. Compose the objects as floating cutout elements on transparent alpha, not inside a poster, card, label plate, app icon tile, product mockup, or scene.
+```
+
+### Logo / 图标编辑的专用追加句
+
+```text
+Keep the logo/icon silhouette only. No badge base, no circular disk, no square tile, no app icon container, no sticker backing, no bevel plate, no paper texture. Transparent pixels must surround every outside edge of the logo/icon.
+```
+
+### 文字 / 标签编辑的专用追加句
+
+```text
+The text is part of the floating cutout asset only. Do not place the text on a rectangle, ribbon panel, poster card, label plate, or sticker backing unless explicitly requested.
+```
+
 ## 文件结构
 
 ```text
