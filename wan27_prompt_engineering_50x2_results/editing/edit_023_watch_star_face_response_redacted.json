@@ -1,6 +1,6 @@
 {
   "status_code": 200,
-  "request_id": "e6f7b740-4d38-995e-b4dc-23e3335d00c2",
+  "request_id": "9c17c289-d01e-9f6c-a480-49fbcb5ed0a0",
   "code": null,
   "message": "",
   "output": {
@@ -13,7 +13,7 @@
           "role": "assistant",
           "content": [
             {
-              "image": "https://dashscope-463f.oss-accelerate.aliyuncs.com/1d/ae/20260512/3d3a021d/1778556230_be37e0da.png?Expires=<redacted>",
+              "image": "https://dashscope-463f.oss-accelerate.aliyuncs.com/1d/de/20260512/3d3a021d/1778556443_0740121f.png?Expires=<redacted>",
               "type": "image"
             }
           ]
@@ -21,19 +21,19 @@
       }
     ],
     "audio": null,
-    "task_id": "8eb2e028-2e33-4115-b11d-7714b7fd9302",
+    "task_id": "06053492-e95d-4ca3-ab17-6994cb1cf321",
     "task_status": "SUCCEEDED",
-    "submit_time": "2026-05-12 11:23:27.801",
-    "scheduled_time": "2026-05-12 11:23:27.826",
-    "end_time": "2026-05-12 11:23:51.233",
+    "submit_time": "2026-05-12 11:27:14.395",
+    "scheduled_time": "2026-05-12 11:27:14.435",
+    "end_time": "2026-05-12 11:27:23.927",
     "finished": true
   },
   "usage": {
-    "input_tokens": 165,
+    "input_tokens": 18782,
     "output_tokens": 2,
     "characters": 0,
     "size": "1024*1024",
-    "total_tokens": 167,
+    "total_tokens": 18784,
     "image_count": 1
   }
 }

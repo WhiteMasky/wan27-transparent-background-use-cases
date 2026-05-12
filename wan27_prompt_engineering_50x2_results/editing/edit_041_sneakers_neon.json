@@ -1,0 +1,31 @@
+{
+  "id": "edit_041_sneakers_neon",
+  "kind": "editing",
+  "category": "透明商品改色",
+  "refs": [
+    "local_sneakers"
+  ],
+  "prompt": "Edit Image 1: preserve transparent background and add neon green accents to the sneakers.\n\nReturn a real PNG with transparent background using the PNG alpha channel.\nIf the input already has transparency, preserve the exact existing alpha mask outside the edited subject.\nIf the input has an opaque background, remove the original background completely.\nOutput only the edited subject, centered, clean antialiased cutout edges.\nNo checkerboard, no white canvas, no gray canvas, no colored backdrop, no wall, no floor, no table, no scene, no frame, no poster rectangle, no decorative background, no texture background, no rays.\nFor recolor or reshaping, keep the same silhouette, geometry, lighting, texture, and object layout unless the edit explicitly asks to transform it.\nFor multi-object edits, create a transparent asset cluster with floating decorative elements, not a poster background.\nThis is an output-format constraint, not a visual style.",
+  "reference_files": [
+    "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\transparent_bg_complex21_results\\clothing_sneaker_pair_wan2-7-image-pro.png"
+  ],
+  "file": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\editing\\edit_041_sneakers_neon.png",
+  "format": "PNG",
+  "mode": "RGBA",
+  "size": [
+    1024,
+    1024
+  ],
+  "has_alpha_mode": true,
+  "transparent_pixel_ratio": 0.2702903747558594,
+  "translucent_pixel_ratio": 0.5733757019042969,
+  "non_opaque_pixel_ratio": 0.8436660766601562,
+  "alpha_bbox": [
+    0,
+    8,
+    1000,
+    1024
+  ],
+  "alpha_success": true,
+  "preview": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\editing\\edit_041_sneakers_neon_checker_preview.jpg"
+}

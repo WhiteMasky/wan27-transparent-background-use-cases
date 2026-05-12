@@ -1,0 +1,31 @@
+{
+  "id": "edit_044_burger_combo_expand",
+  "kind": "editing",
+  "category": "餐饮组合",
+  "refs": [
+    "burger"
+  ],
+  "prompt": "Edit Image 1: isolate the burger and add fries plus a small sauce cup as a transparent food combo asset.\n\nReturn a real PNG with transparent background using the PNG alpha channel.\nIf the input already has transparency, preserve the exact existing alpha mask outside the edited subject.\nIf the input has an opaque background, remove the original background completely.\nOutput only the edited subject, centered, clean antialiased cutout edges.\nNo checkerboard, no white canvas, no gray canvas, no colored backdrop, no wall, no floor, no table, no scene, no frame, no poster rectangle, no decorative background, no texture background, no rays.\nFor recolor or reshaping, keep the same silhouette, geometry, lighting, texture, and object layout unless the edit explicitly asks to transform it.\nFor multi-object edits, create a transparent asset cluster with floating decorative elements, not a poster background.\nThis is an output-format constraint, not a visual style.",
+  "reference_files": [
+    "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\references\\burger.jpg"
+  ],
+  "file": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\editing\\edit_044_burger_combo_expand.png",
+  "format": "PNG",
+  "mode": "RGBA",
+  "size": [
+    1181,
+    886
+  ],
+  "has_alpha_mode": true,
+  "transparent_pixel_ratio": 0.8416013134983361,
+  "translucent_pixel_ratio": 0.08721422523285352,
+  "non_opaque_pixel_ratio": 0.9288155387311896,
+  "alpha_bbox": [
+    0,
+    0,
+    1181,
+    886
+  ],
+  "alpha_success": true,
+  "preview": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\editing\\edit_044_burger_combo_expand_checker_preview.jpg"
+}

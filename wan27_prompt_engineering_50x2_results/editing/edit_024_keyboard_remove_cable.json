@@ -1,0 +1,31 @@
+{
+  "id": "edit_024_keyboard_remove_cable",
+  "kind": "editing",
+  "category": "删元素",
+  "refs": [
+    "keyboard"
+  ],
+  "prompt": "Edit Image 1: isolate the keyboard and remove any visible cable, keeping the keyboard complete and clean.\n\nReturn a real PNG with transparent background using the PNG alpha channel.\nIf the input already has transparency, preserve the exact existing alpha mask outside the edited subject.\nIf the input has an opaque background, remove the original background completely.\nOutput only the edited subject, centered, clean antialiased cutout edges.\nNo checkerboard, no white canvas, no gray canvas, no colored backdrop, no wall, no floor, no table, no scene, no frame, no poster rectangle, no decorative background, no texture background, no rays.\nFor recolor or reshaping, keep the same silhouette, geometry, lighting, texture, and object layout unless the edit explicitly asks to transform it.\nFor multi-object edits, create a transparent asset cluster with floating decorative elements, not a poster background.\nThis is an output-format constraint, not a visual style.",
+  "reference_files": [
+    "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\references\\keyboard.jpg"
+  ],
+  "file": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\editing\\edit_024_keyboard_remove_cable.png",
+  "format": "PNG",
+  "mode": "RGBA",
+  "size": [
+    1181,
+    886
+  ],
+  "has_alpha_mode": true,
+  "transparent_pixel_ratio": 0.7773914672303954,
+  "translucent_pixel_ratio": 0.13197580961155084,
+  "non_opaque_pixel_ratio": 0.9093672768419463,
+  "alpha_bbox": [
+    0,
+    0,
+    1181,
+    886
+  ],
+  "alpha_success": true,
+  "preview": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\editing\\edit_024_keyboard_remove_cable_checker_preview.jpg"
+}
