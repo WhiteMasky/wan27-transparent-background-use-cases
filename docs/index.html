@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wan2.7 透明背景 Use Cases</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="topbar" aria-label="主导航">
+      <div class="brand">
+        <span class="brand-mark">α</span>
+        <span>Wan2.7 Transparent Lab</span>
+      </div>
+      <a class="repo-link" href="#prompting">提示词技巧</a>
+    </nav>
+    <section class="hero-grid">
+      <div>
+        <h1>Wan2.7 透明背景生成与编辑案例库</h1>
+        <p class="lead">把实测图片、参考图、成功率、提示词和透明 alpha 判定放到同一个可浏览页面，方便复用和横向比较。</p>
+        <div class="hero-actions">
+          <a class="primary" href="#cases">查看案例</a>
+          <a class="secondary" href="#templates">复制模板</a>
+        </div>
+      </div>
+      <div class="metric-panel" aria-label="测试指标">
+        <div class="metric">
+          <span id="overallRate">--</span>
+          <small>总体透明成功率</small>
+        </div>
+        <div class="metric-row">
+          <div><strong id="generationRate">--</strong><small>文本生成</small></div>
+          <div><strong id="editingRate">--</strong><small>参考图编辑</small></div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section summary">
+      <div class="section-title">
+        <h2>测试结论</h2>
+        <p>Wan2.7 对文本直出透明 PNG 更稳定；参考图编辑也可用，但多图海报素材和 Logo 质感化更容易生成不透明背景。</p>
+      </div>
+      <div class="insight-grid">
+        <article><h3>生成</h3><p>商品、服饰、动漫人物、真人模特和食物素材成功率高，提示词要强调 isolated asset 与 PNG alpha。</p></article>
+        <article><h3>编辑</h3><p>抠图、换色、人物换装、车身贴花表现较好；复杂海报拼接要额外禁止装饰背景。</p></article>
+        <article><h3>验收</h3><p>只看棋盘格预览不够，必须检查 PNG/RGBA 和透明像素比例，避免“假透明”。</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="cases">
+      <div class="section-title split">
+        <div>
+          <h2>Use Case 表格</h2>
+          <p>每条案例保留原提示词、透明像素比例和图片。编辑案例会展示参考图。</p>
+        </div>
+        <div class="filters" aria-label="筛选">
+          <select id="kindFilter" aria-label="类型筛选">
+            <option value="all">全部类型</option>
+            <option value="generation">透明背景生成</option>
+            <option value="editing">透明背景编辑</option>
+          </select>
+          <select id="statusFilter" aria-label="状态筛选">
+            <option value="all">全部结果</option>
+            <option value="success">只看成功</option>
+            <option value="fail">只看失败</option>
+          </select>
+          <select id="categoryFilter" aria-label="类别筛选"></select>
+        </div>
+      </div>
+      <div class="case-list" id="caseList"></div>
+    </section>
+
+    <section class="section prompting" id="prompting">
+      <div class="section-title">
+        <h2>确保完全透明的提示词工程</h2>
+        <p>核心思路：把透明背景定义为文件输出约束，而不是视觉风格描述。</p>
+      </div>
+      <div class="rules">
+        <article>
+          <h3>生成时</h3>
+          <ul>
+            <li>写清楚 <code>real PNG</code> 与 <code>PNG alpha channel</code>。</li>
+            <li>使用 <code>isolated asset</code>、<code>subject only</code>、<code>catalog cutout</code>。</li>
+            <li>禁止 <code>checkerboard</code>、白底、灰底、场景、桌面、墙面和海报矩形。</li>
+          </ul>
+        </article>
+        <article>
+          <h3>编辑时</h3>
+          <ul>
+            <li>透明输入：要求 <code>preserve the exact existing alpha mask</code>。</li>
+            <li>不透明输入：要求 <code>remove the original background completely</code>。</li>
+            <li>多图拼接：用 <code>transparent asset cluster</code>，避免 <code>poster background</code>。</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section templates" id="templates">
+      <div class="section-title">
+        <h2>推荐模板</h2>
+      </div>
+      <div class="template-grid">
+        <article>
+          <h3>透明背景生成</h3>
+          <pre><code>Create a production-ready isolated asset as a real PNG with transparent background. The background must be fully transparent using the PNG alpha channel. Do not draw a checkerboard pattern, white canvas, gray canvas, colored backdrop, shadow box, scene, floor, wall, table, border, frame, or poster rectangle. Subject only, centered, clean cutout edges, natural antialiasing on edge pixels. Asset brief: [你的主体描述]</code></pre>
+        </article>
+        <article>
+          <h3>透明背景编辑</h3>
+          <pre><code>Edit Image 1: [具体编辑目标]. Return a real PNG with transparent background using the PNG alpha channel. If the input already has transparency, preserve the exact existing alpha mask outside the edited subject. If the input has an opaque background, remove it completely. Output only the edited subject, centered, clean antialiased cutout edges. No checkerboard, no white canvas, no gray canvas, no colored backdrop, no wall, no floor, no table, no scene, no frame, no poster rectangle, no decorative background.</code></pre>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Wan2.7 transparent background test archive</span>
+    <span>Generated from local experiment data</span>
+  </footer>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
