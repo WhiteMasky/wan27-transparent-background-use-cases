@@ -51,6 +51,63 @@ No checkerboard, no white canvas, no gray canvas, no colored backdrop, no wall, 
 9. 海报素材类要额外禁止 `rays`、`texture background`、`decorative background`，否则模型容易生成完整海报底图。
 10. 验收必须做像素级 alpha 检查：PNG/RGBA 且存在真实透明像素，不能只看肉眼预览。
 
+## 失败经验与优化方向
+
+在“把提示词工程要点直接塞进 prompt”的 50 张文本生图测试中，透明背景成功率为 `41/50 = 82%`。失败样本的主要问题不是没有 alpha 通道，而是 **文件是 RGBA，但透明像素为 0%**。这意味着模型理解了 PNG/RGBA 格式，却仍然给整张画布填了不透明底。
+
+### 容易失败的类型
+
+- Logo / 徽章类：模型容易生成圆形底、方形底、app icon 容器、贴纸底或白色画布。
+- 海报标题 / 字体素材：只要出现 `title asset`、`readable text`、`chrome ribbon`、`equalizer bars`，模型容易补成完整标题牌或海报块。
+- 商品组合：`bundle`、`box`、`polishing cloth`、`floating arrangement` 会诱导模型生成展示台面或陈列背景。
+- 反光硬表面商品：轮毂、头盔、金属商品容易生成摄影棚反射、地面反光或环境光板。
+- 真人动作道具：人物加器械或动态姿势时，模型容易补健身房、地面、阴影和背景灯。
+
+### 强化版透明背景生成模板
+
+```text
+Create a production-ready isolated cutout asset as a real PNG with transparent background.
+The canvas outside the visible subject must be 100% transparent alpha, not white, gray, black, colored, or checkerboard.
+At least 40% of the image area should be fully transparent alpha.
+Only the subject pixels should be opaque or translucent.
+Do not create any backing shape, badge base, sticker sheet, label plate, poster rectangle, paper, card, platform, tabletop, floor, wall, studio backdrop, cast shadow, reflection surface, frame, border, glow panel, or texture background.
+Keep shadows and glow only inside the subject silhouette or immediately attached to the object, never on a background.
+Subject only, centered, complete, clean antialiased cutout edges.
+Asset brief: [你的主体描述]
+```
+
+### 按场景追加的约束
+
+Logo 类：
+
+```text
+Logo mark only. No badge background, no circle base, no square tile, no app icon container, no paper, no mockup, no sticker backing. Transparent pixels must surround every outside edge of the logo.
+```
+
+海报素材 / 标题字：
+
+```text
+Create floating typography and decorative elements only, not a poster. No rectangular poster, no title card, no background rays, no panel, no banner block. Each decorative element floats on transparent alpha.
+```
+
+商品组合：
+
+```text
+Floating product bundle only. No display surface, no box base unless the box is an actual product item, no tabletop, no studio floor, no contact shadow. Leave transparent empty space between and around objects.
+```
+
+反光商品：
+
+```text
+Reflections must appear only on the object material itself. Do not create reflected floors, horizon lines, studio panels, or environment reflections outside the product silhouette.
+```
+
+真人人物：
+
+```text
+Full-body/person cutout only. No gym, no room, no floor contact shadow, no background lighting panel. The empty area around limbs and props must be transparent alpha.
+```
+
 ## 文件结构
 
 ```text
