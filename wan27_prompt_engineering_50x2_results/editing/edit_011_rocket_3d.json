@@ -1,0 +1,31 @@
+{
+  "id": "edit_011_rocket_3d",
+  "kind": "editing",
+  "category": "透明图标变形",
+  "refs": [
+    "transparent_rocket"
+  ],
+  "prompt": "Edit Image 1: preserve transparency and morph the rocket icon into a glossy 3D sticker with a thick clean outline.\n\nReturn a real PNG with transparent background using the PNG alpha channel.\nIf the input already has transparency, preserve the exact existing alpha mask outside the edited subject.\nIf the input has an opaque background, remove the original background completely.\nOutput only the edited subject, centered, clean antialiased cutout edges.\nNo checkerboard, no white canvas, no gray canvas, no colored backdrop, no wall, no floor, no table, no scene, no frame, no poster rectangle, no decorative background, no texture background, no rays.\nFor recolor or reshaping, keep the same silhouette, geometry, lighting, texture, and object layout unless the edit explicitly asks to transform it.\nFor multi-object edits, create a transparent asset cluster with floating decorative elements, not a poster background.\nThis is an output-format constraint, not a visual style.",
+  "reference_files": [
+    "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\references\\transparent_rocket.png"
+  ],
+  "file": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\editing\\edit_011_rocket_3d.png",
+  "format": "PNG",
+  "mode": "RGBA",
+  "size": [
+    1024,
+    1024
+  ],
+  "has_alpha_mode": true,
+  "transparent_pixel_ratio": 0.0,
+  "translucent_pixel_ratio": 0.08835506439208984,
+  "non_opaque_pixel_ratio": 0.08835506439208984,
+  "alpha_bbox": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "alpha_success": false,
+  "preview": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\editing\\edit_011_rocket_3d_checker_preview.jpg"
+}

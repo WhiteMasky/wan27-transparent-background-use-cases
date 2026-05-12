@@ -1,0 +1,31 @@
+{
+  "id": "edit_004_watch_red_strap",
+  "kind": "editing",
+  "category": "电子商品改色",
+  "refs": [
+    "watch"
+  ],
+  "prompt": "Edit Image 1: isolate the watch and change the strap to deep red silicone while preserving the watch face.\n\nReturn a real PNG with transparent background using the PNG alpha channel.\nIf the input already has transparency, preserve the exact existing alpha mask outside the edited subject.\nIf the input has an opaque background, remove the original background completely.\nOutput only the edited subject, centered, clean antialiased cutout edges.\nNo checkerboard, no white canvas, no gray canvas, no colored backdrop, no wall, no floor, no table, no scene, no frame, no poster rectangle, no decorative background, no texture background, no rays.\nFor recolor or reshaping, keep the same silhouette, geometry, lighting, texture, and object layout unless the edit explicitly asks to transform it.\nFor multi-object edits, create a transparent asset cluster with floating decorative elements, not a poster background.\nThis is an output-format constraint, not a visual style.",
+  "reference_files": [
+    "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\references\\watch.jpg"
+  ],
+  "file": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\editing\\edit_004_watch_red_strap.png",
+  "format": "PNG",
+  "mode": "RGBA",
+  "size": [
+    1181,
+    886
+  ],
+  "has_alpha_mode": true,
+  "transparent_pixel_ratio": 0.8743193108338765,
+  "translucent_pixel_ratio": 0.08142466402769204,
+  "non_opaque_pixel_ratio": 0.9557439748615685,
+  "alpha_bbox": [
+    0,
+    0,
+    1181,
+    886
+  ],
+  "alpha_success": true,
+  "preview": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\editing\\edit_004_watch_red_strap_checker_preview.jpg"
+}

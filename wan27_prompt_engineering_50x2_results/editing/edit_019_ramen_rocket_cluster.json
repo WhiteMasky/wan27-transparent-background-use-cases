@@ -1,0 +1,33 @@
+{
+  "id": "edit_019_ramen_rocket_cluster",
+  "kind": "editing",
+  "category": "多图拼接",
+  "refs": [
+    "ramen",
+    "transparent_rocket"
+  ],
+  "prompt": "Use Image 1 as the food subject and Image 2 as decorative reference. Create a transparent food poster asset cluster with small rocket stickers floating around the ramen.\n\nReturn a real PNG with transparent background using the PNG alpha channel.\nIf the input already has transparency, preserve the exact existing alpha mask outside the edited subject.\nIf the input has an opaque background, remove the original background completely.\nOutput only the edited subject, centered, clean antialiased cutout edges.\nNo checkerboard, no white canvas, no gray canvas, no colored backdrop, no wall, no floor, no table, no scene, no frame, no poster rectangle, no decorative background, no texture background, no rays.\nFor recolor or reshaping, keep the same silhouette, geometry, lighting, texture, and object layout unless the edit explicitly asks to transform it.\nFor multi-object edits, create a transparent asset cluster with floating decorative elements, not a poster background.\nThis is an output-format constraint, not a visual style.",
+  "reference_files": [
+    "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\references\\ramen.jpg",
+    "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\references\\transparent_rocket.png"
+  ],
+  "file": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\editing\\edit_019_ramen_rocket_cluster.png",
+  "format": "PNG",
+  "mode": "RGBA",
+  "size": [
+    1024,
+    1024
+  ],
+  "has_alpha_mode": true,
+  "transparent_pixel_ratio": 0.49156856536865234,
+  "translucent_pixel_ratio": 0.09051990509033203,
+  "non_opaque_pixel_ratio": 0.5820884704589844,
+  "alpha_bbox": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "alpha_success": true,
+  "preview": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\editing\\edit_019_ramen_rocket_cluster_checker_preview.jpg"
+}

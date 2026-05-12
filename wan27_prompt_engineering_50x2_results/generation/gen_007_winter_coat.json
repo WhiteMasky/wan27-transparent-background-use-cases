@@ -1,0 +1,8 @@
+{
+  "id": "gen_007_winter_coat",
+  "kind": "generation",
+  "category": "服饰",
+  "prompt": "Create a production-ready isolated asset as a real PNG with transparent background.\nThe background must be fully transparent using the PNG alpha channel.\nDo not draw a checkerboard pattern, white canvas, gray canvas, colored backdrop, shadow box, scene, floor, wall, table, border, frame, poster rectangle, texture background, rays, or decorative background.\nSubject only, centered, clean cutout edges, natural antialiasing on edge pixels.\nThis is an output-format constraint, not a visual style.\nUse isolated asset, subject only, and catalog cutout behavior.\nKeep the same object visually complete, with no cropped edges.\n\nAsset brief: A long olive green winter parka coat floating front view, realistic fabric and zipper details.",
+  "alpha_success": false,
+  "error": "no image url"
+}

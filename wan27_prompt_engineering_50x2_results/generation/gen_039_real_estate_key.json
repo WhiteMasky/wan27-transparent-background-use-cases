@@ -1,0 +1,25 @@
+{
+  "id": "gen_039_real_estate_key",
+  "kind": "generation",
+  "category": "地产素材",
+  "prompt": "Create a production-ready isolated asset as a real PNG with transparent background.\nThe background must be fully transparent using the PNG alpha channel.\nDo not draw a checkerboard pattern, white canvas, gray canvas, colored backdrop, shadow box, scene, floor, wall, table, border, frame, poster rectangle, texture background, rays, or decorative background.\nSubject only, centered, clean cutout edges, natural antialiasing on edge pixels.\nThis is an output-format constraint, not a visual style.\nUse isolated asset, subject only, and catalog cutout behavior.\nKeep the same object visually complete, with no cropped edges.\n\nAsset brief: A real estate key handover asset: gold key, small house model, ribbon, clean commercial render.",
+  "file": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\generation\\gen_039_real_estate_key.png",
+  "format": "PNG",
+  "mode": "RGBA",
+  "size": [
+    1024,
+    1024
+  ],
+  "has_alpha_mode": true,
+  "transparent_pixel_ratio": 0.8068752288818359,
+  "translucent_pixel_ratio": 0.1360797882080078,
+  "non_opaque_pixel_ratio": 0.9429550170898438,
+  "alpha_bbox": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "alpha_success": true,
+  "preview": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\generation\\gen_039_real_estate_key_checker_preview.jpg"
+}

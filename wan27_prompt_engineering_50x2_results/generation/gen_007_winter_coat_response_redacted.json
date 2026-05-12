@@ -1,0 +1,24 @@
+{
+  "status_code": 200,
+  "request_id": "acef670a-8599-9589-9a96-c76267286cc9",
+  "code": null,
+  "message": "",
+  "output": {
+    "text": null,
+    "finish_reason": null,
+    "choices": null,
+    "audio": null,
+    "task_id": "0f3bf4c4-db10-4005-b436-5ce4e21f78e4",
+    "task_status": "FAILED",
+    "submit_time": "2026-05-12 10:22:02.449",
+    "scheduled_time": "2026-05-12 10:22:02.468",
+    "end_time": "2026-05-12 10:52:15.642",
+    "code": "ResponseTimeout",
+    "message": "<504> InternalError.Algo: <504> InternalError.Algo: Response stream timeout (timeout_seconds=1800, elapsed_ms=1800003)"
+  },
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "characters": 0
+  }
+}

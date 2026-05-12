@@ -1,0 +1,39 @@
+{
+  "status_code": 200,
+  "request_id": "88118967-4567-9c5d-9ccf-f588f3eb7fba",
+  "code": null,
+  "message": "",
+  "output": {
+    "text": null,
+    "finish_reason": null,
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": [
+            {
+              "image": "https://dashscope-463f.oss-accelerate.aliyuncs.com/1d/dc/20260512/3d3a021d/1778555747_16fd872f.png?Expires=<redacted>",
+              "type": "image"
+            }
+          ]
+        }
+      }
+    ],
+    "audio": null,
+    "task_id": "9659e5e1-c13a-44cf-ab72-215bd7884ce6",
+    "task_status": "SUCCEEDED",
+    "submit_time": "2026-05-12 11:15:40.009",
+    "scheduled_time": "2026-05-12 11:15:40.026",
+    "end_time": "2026-05-12 11:15:47.880",
+    "finished": true
+  },
+  "usage": {
+    "input_tokens": 9510,
+    "output_tokens": 2,
+    "characters": 0,
+    "size": "1181*886",
+    "total_tokens": 9512,
+    "image_count": 1
+  }
+}

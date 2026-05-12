@@ -1,0 +1,25 @@
+{
+  "id": "gen_021_spring_campaign",
+  "kind": "generation",
+  "category": "海报素材",
+  "prompt": "Create a production-ready isolated asset as a real PNG with transparent background.\nThe background must be fully transparent using the PNG alpha channel.\nDo not draw a checkerboard pattern, white canvas, gray canvas, colored backdrop, shadow box, scene, floor, wall, table, border, frame, poster rectangle, texture background, rays, or decorative background.\nSubject only, centered, clean cutout edges, natural antialiasing on edge pixels.\nThis is an output-format constraint, not a visual style.\nUse isolated asset, subject only, and catalog cutout behavior.\nKeep the same object visually complete, with no cropped edges.\n\nAsset brief: A spring campaign decorative asset cluster: flowers, coupon shape, ribbon, readable English text SPRING SALE.",
+  "file": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\generation\\gen_021_spring_campaign.png",
+  "format": "PNG",
+  "mode": "RGBA",
+  "size": [
+    1024,
+    1024
+  ],
+  "has_alpha_mode": true,
+  "transparent_pixel_ratio": 0.6414728164672852,
+  "translucent_pixel_ratio": 0.24173927307128906,
+  "non_opaque_pixel_ratio": 0.8832120895385742,
+  "alpha_bbox": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "alpha_success": true,
+  "preview": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\generation\\gen_021_spring_campaign_checker_preview.jpg"
+}

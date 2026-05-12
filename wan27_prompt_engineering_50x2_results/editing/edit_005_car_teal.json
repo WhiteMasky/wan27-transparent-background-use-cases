@@ -1,0 +1,31 @@
+{
+  "id": "edit_005_car_teal",
+  "kind": "editing",
+  "category": "汽车抠图改色",
+  "refs": [
+    "car"
+  ],
+  "prompt": "Edit Image 1: isolate the car and change body paint to metallic teal, preserving windows, wheels, and lighting.\n\nReturn a real PNG with transparent background using the PNG alpha channel.\nIf the input already has transparency, preserve the exact existing alpha mask outside the edited subject.\nIf the input has an opaque background, remove the original background completely.\nOutput only the edited subject, centered, clean antialiased cutout edges.\nNo checkerboard, no white canvas, no gray canvas, no colored backdrop, no wall, no floor, no table, no scene, no frame, no poster rectangle, no decorative background, no texture background, no rays.\nFor recolor or reshaping, keep the same silhouette, geometry, lighting, texture, and object layout unless the edit explicitly asks to transform it.\nFor multi-object edits, create a transparent asset cluster with floating decorative elements, not a poster background.\nThis is an output-format constraint, not a visual style.",
+  "reference_files": [
+    "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\references\\car.jpg"
+  ],
+  "file": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\editing\\edit_005_car_teal.png",
+  "format": "PNG",
+  "mode": "RGBA",
+  "size": [
+    1181,
+    886
+  ],
+  "has_alpha_mode": true,
+  "transparent_pixel_ratio": 0.971601714887525,
+  "translucent_pixel_ratio": 0.017554087193200084,
+  "non_opaque_pixel_ratio": 0.9891558020807251,
+  "alpha_bbox": [
+    0,
+    0,
+    1181,
+    886
+  ],
+  "alpha_success": true,
+  "preview": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\editing\\edit_005_car_teal_checker_preview.jpg"
+}

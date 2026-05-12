@@ -1,0 +1,25 @@
+{
+  "id": "gen_011_anime_knight",
+  "kind": "generation",
+  "category": "动漫人物",
+  "prompt": "Create a production-ready isolated asset as a real PNG with transparent background.\nThe background must be fully transparent using the PNG alpha channel.\nDo not draw a checkerboard pattern, white canvas, gray canvas, colored backdrop, shadow box, scene, floor, wall, table, border, frame, poster rectangle, texture background, rays, or decorative background.\nSubject only, centered, clean cutout edges, natural antialiasing on edge pixels.\nThis is an output-format constraint, not a visual style.\nUse isolated asset, subject only, and catalog cutout behavior.\nKeep the same object visually complete, with no cropped edges.\n\nAsset brief: A full-body original anime cyber knight character, luminous sword, armor plates, dynamic stance.",
+  "file": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\generation\\gen_011_anime_knight.png",
+  "format": "PNG",
+  "mode": "RGBA",
+  "size": [
+    1024,
+    1024
+  ],
+  "has_alpha_mode": true,
+  "transparent_pixel_ratio": 0.7983274459838867,
+  "translucent_pixel_ratio": 0.1532611846923828,
+  "non_opaque_pixel_ratio": 0.9515886306762695,
+  "alpha_bbox": [
+    190,
+    27,
+    876,
+    995
+  ],
+  "alpha_success": true,
+  "preview": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\generation\\gen_011_anime_knight_checker_preview.jpg"
+}

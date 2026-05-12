@@ -1,0 +1,25 @@
+{
+  "id": "gen_040_finance_coin",
+  "kind": "generation",
+  "category": "金融素材",
+  "prompt": "Create a production-ready isolated asset as a real PNG with transparent background.\nThe background must be fully transparent using the PNG alpha channel.\nDo not draw a checkerboard pattern, white canvas, gray canvas, colored backdrop, shadow box, scene, floor, wall, table, border, frame, poster rectangle, texture background, rays, or decorative background.\nSubject only, centered, clean cutout edges, natural antialiasing on edge pixels.\nThis is an output-format constraint, not a visual style.\nUse isolated asset, subject only, and catalog cutout behavior.\nKeep the same object visually complete, with no cropped edges.\n\nAsset brief: A fintech asset cluster with coins, credit card, upward arrow, secure shield, polished 3D style.",
+  "file": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\generation\\gen_040_finance_coin.png",
+  "format": "PNG",
+  "mode": "RGBA",
+  "size": [
+    1024,
+    1024
+  ],
+  "has_alpha_mode": true,
+  "transparent_pixel_ratio": 0.741612434387207,
+  "translucent_pixel_ratio": 0.17667293548583984,
+  "non_opaque_pixel_ratio": 0.9182853698730469,
+  "alpha_bbox": [
+    144,
+    265,
+    880,
+    890
+  ],
+  "alpha_success": true,
+  "preview": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\generation\\gen_040_finance_coin_checker_preview.jpg"
+}

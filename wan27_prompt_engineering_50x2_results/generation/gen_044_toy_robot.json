@@ -1,0 +1,25 @@
+{
+  "id": "gen_044_toy_robot",
+  "kind": "generation",
+  "category": "玩具商品",
+  "prompt": "Create a production-ready isolated asset as a real PNG with transparent background.\nThe background must be fully transparent using the PNG alpha channel.\nDo not draw a checkerboard pattern, white canvas, gray canvas, colored backdrop, shadow box, scene, floor, wall, table, border, frame, poster rectangle, texture background, rays, or decorative background.\nSubject only, centered, clean cutout edges, natural antialiasing on edge pixels.\nThis is an output-format constraint, not a visual style.\nUse isolated asset, subject only, and catalog cutout behavior.\nKeep the same object visually complete, with no cropped edges.\n\nAsset brief: A colorful toy robot with movable arms, friendly face, plastic product render.",
+  "file": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\generation\\gen_044_toy_robot.png",
+  "format": "PNG",
+  "mode": "RGBA",
+  "size": [
+    1024,
+    1024
+  ],
+  "has_alpha_mode": true,
+  "transparent_pixel_ratio": 0.6568508148193359,
+  "translucent_pixel_ratio": 0.2298440933227539,
+  "non_opaque_pixel_ratio": 0.8866949081420898,
+  "alpha_bbox": [
+    0,
+    0,
+    1024,
+    1024
+  ],
+  "alpha_success": true,
+  "preview": "C:\\Users\\zyc\\Documents\\Codex\\2026-05-11\\wan2-7-qwen-image-2-0\\wan27_prompt_engineering_50x2_results\\generation\\gen_044_toy_robot_checker_preview.jpg"
+}
